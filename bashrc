@@ -121,6 +121,7 @@ alias apt-remove-unused='sudo apt autoremove'
 # System
 alias save-etc='sudo etckeeper commit'
 alias etc-history='cd /etc && sudo gitk && cd -'
+alias status='uname -sr && date && sensors | grep Core && free -h'
 
 # Network
 alias check-internet-connection='ping 8.8.8.8 -c 5'
