@@ -156,3 +156,7 @@ function convert-to-progressive-jpg() {
     convert -strip -interlace Plane -quality 80 $1 $2
 }
 
+function clocks() {
+    printf "MSK" && TZ=":Europe/Moscow"    date "+%_I:%M %p %A"
+    printf "NYC" && TZ=":America/New_York" date "+%_I:%M %p %A"
+}
