@@ -105,8 +105,8 @@ alias top='htop'
 alias bash-reload='source ~/.bashrc'
 
 # Git
-alias gp='git pull'
-alias gs='git status'
+alias gp='git pull --rebase'
+alias gs='git status -sb'
 alias git-reset-to-origin='git fetch origin && git reset --hard origin/master && git clean -f -d'
 
 # NPM
