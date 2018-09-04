@@ -40,7 +40,7 @@ set expandtab
 "   Line endings
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-set ff=unix
+autocmd BufWritePre * set ff=unix
 
 
 
