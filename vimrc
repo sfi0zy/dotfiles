@@ -124,7 +124,7 @@ let g:syntastic_check_on_wq              = 0
 
 " Eslint
 let g:syntastic_javascript_checkers      = ['eslint']
-let g:syntastic_javascript_eslint_exe    = '[ -f $(npm bin)/eslint ] && $(npm bin)/eslint || eslint'
+let g:syntastic_javascript_eslint_exe    = 'npx eslint'
 let g:syntastic_javascript_eslint_exec   = '/bin/ls'
 let g:syntastic_javascript_eslint_args   = '--no-eslintrc --config ./.eslintrc'
 
