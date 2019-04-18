@@ -117,6 +117,7 @@ alias npm-update-globals='npm update -g'
 # APT
 alias apt-update-all='sudo apt update && sudo apt upgrade'
 alias apt-remove-unused='sudo apt autoremove'
+alias apt-list-packages='apt-mark showmanual'
 
 # System
 alias save-etc='sudo etckeeper commit'
