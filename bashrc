@@ -112,7 +112,7 @@ alias git-reset-to-origin='git fetch origin && git reset --hard origin/master &&
 # NPM
 alias npm-list-global-packages='npm list -g --depth=0'
 alias npm-list-global-updates='npm outdated -g --depth=0'
-alias npm-update-globals='sudo npm update -g'
+alias npm-update-globals='npm update -g'
 
 # APT
 alias apt-update-all='sudo apt update && sudo apt upgrade'
