@@ -158,6 +158,6 @@ function convert-to-progressive-jpg() {
 }
 
 function clocks() {
-    printf "MSK" && TZ=":Europe/Moscow"    date "+%_I:%M %p %A"
-    printf "NYC" && TZ=":America/New_York" date "+%_I:%M %p %A"
+    printf "MSK " && TZ=":Europe/Moscow"       date "+%_I:%M %p %A"
+    printf "SV  " && TZ=":America/Los_Angeles" date "+%_I:%M %p %A"
 }
