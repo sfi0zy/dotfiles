@@ -2,7 +2,7 @@
 #
 # ~/.bashrc
 #
-# Author: Ivan Bogachev <sfi0zy@gmail.com> (https://sfi0zy.github.io/), 2018
+# Author: Ivan Bogachev <sfi0zy@gmail.com>, 2018-2019
 #
 # ==============================================================================
 
