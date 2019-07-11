@@ -3,14 +3,15 @@
 " ~/.vimrc
 "
 " Installed packages:
-"   - Pathogen       - https://github.com/tpope/vim-pathogen
-"   - Emmet          - https://github.com/mattn/emmet-vim
-"   - NerdTree       - https://github.com/scrooloose/nerdtree
-"   - Syntastic      - https://github.com/vim-syntastic/syntastic
-"   = indentLine     - https://github.com/Yggdroot/indentLine
-"   - vim-javascript - https://github.com/pangloss/vim-javascript
-"   - vim-less       - https://github.com/groenewege/vim-less
-"   - vim-pug        - https://github.com/digitaltoad/vim-pug
+"   - Pathogen            - https://github.com/tpope/vim-pathogen
+"   - Emmet               - https://github.com/mattn/emmet-vim
+"   - NerdTree            - https://github.com/scrooloose/nerdtree
+"   - Syntastic           - https://github.com/vim-syntastic/syntastic
+"   - indentLine          - https://github.com/Yggdroot/indentLine
+"   - vim-multiple-cusors - https://github.com/terryma/vim-multiple-cursors
+"   - vim-javascript      - https://github.com/pangloss/vim-javascript
+"   - vim-less            - https://github.com/groenewege/vim-less
+"   - vim-pug             - https://github.com/digitaltoad/vim-pug
 "
 " Author: Ivan Bogachev <sfi0zy@gmail.com>, 2018-2019
 "
