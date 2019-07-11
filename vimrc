@@ -149,5 +149,4 @@ let g:syntastic_javascript_eslint_args   = '--no-eslintrc --config ./.eslintrc'
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 " Disable the auto-hide feature (first of all for double-quotes in JSON)
-let g:indentLine_setConceal = 0
-
+autocmd Filetype json :IndentLinesDisable
