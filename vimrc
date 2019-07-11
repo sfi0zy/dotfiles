@@ -3,16 +3,16 @@
 " ~/.vimrc
 "
 " Installed packages:
-"   - Emmet     - https://github.com/mattn/emmet-vim
-"   - NerdTree  - https://github.com/scrooloose/nerdtree
-"   - Pathogen  - https://github.com/tpope/vim-pathogen
-"   - Syntastic - https://github.com/vim-syntastic/syntastic
-"
+"   - Pathogen       - https://github.com/tpope/vim-pathogen
+"   - Emmet          - https://github.com/mattn/emmet-vim
+"   - NerdTree       - https://github.com/scrooloose/nerdtree
+"   - Syntastic      - https://github.com/vim-syntastic/syntastic
+"   = indentLine     - https://github.com/Yggdroot/indentLine
 "   - vim-javascript - https://github.com/pangloss/vim-javascript
 "   - vim-less       - https://github.com/groenewege/vim-less
 "   - vim-pug        - https://github.com/digitaltoad/vim-pug
 "
-" Author: Ivan Bogachev <sfi0zy@gmail.com> (https://sfi0zy.github.io/), 2018
+" Author: Ivan Bogachev <sfi0zy@gmail.com>, 2018-2019
 "
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -34,6 +34,8 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+" Set color for vertical lines (indentations)
+let g:indentLine_color_term = 236
 
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,7 +43,6 @@ set expandtab
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 autocmd BufWritePre * set ff=unix
-
 
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,7 +116,7 @@ set wildmenu
 let g:user_emmet_leader_key = '<C-Z>'
 
 
-" Disable automatic comment insertion
+" Disable auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 
