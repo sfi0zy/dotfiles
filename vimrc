@@ -142,3 +142,12 @@ let g:syntastic_javascript_eslint_exe    = 'npx eslint'
 let g:syntastic_javascript_eslint_exec   = '/bin/ls'
 let g:syntastic_javascript_eslint_args   = '--no-eslintrc --config ./.eslintrc'
 
+
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"  Others
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+" Disable the auto-hide feature (first of all for double-quotes in JSON)
+let g:indentLine_setConceal = 0
+
