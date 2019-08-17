@@ -8,10 +8,16 @@
 "   - NerdTree            - https://github.com/scrooloose/nerdtree
 "   - Syntastic           - https://github.com/vim-syntastic/syntastic
 "   - indentLine          - https://github.com/Yggdroot/indentLine
+"   - vim-grammarous      - https://github.com/rhysd/vim-grammarous
 "   - vim-multiple-cusors - https://github.com/terryma/vim-multiple-cursors
 "   - vim-javascript      - https://github.com/pangloss/vim-javascript
 "   - vim-less            - https://github.com/groenewege/vim-less
 "   - vim-pug             - https://github.com/digitaltoad/vim-pug
+"
+" Run this commands after installing:
+"   To fix json bugs:
+"     :e $VIMRUNTIME/syntax/json.vim
+"     :g/if has('conceal')/s//& \&\& 0/
 "
 " Author: Ivan Bogachev <sfi0zy@gmail.com>, 2018-2019
 "
@@ -57,6 +63,8 @@ set nu
 autocmd vimenter * NERDTree
 let NERDTreeShowHidden = 1
 
+" Sets the current directory to skip %:h/ in the commands
+:set autochdir
 
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -148,5 +156,5 @@ let g:syntastic_javascript_eslint_args   = '--no-eslintrc --config ./.eslintrc'
 "  Others
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-" Disable the auto-hide feature (first of all for double-quotes in JSON)
-autocmd Filetype json :IndentLinesDisable
+" . . .
+
