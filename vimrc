@@ -13,6 +13,7 @@
 "   - vim-javascript      - https://github.com/pangloss/vim-javascript
 "   - vim-less            - https://github.com/groenewege/vim-less
 "   - vim-pug             - https://github.com/digitaltoad/vim-pug
+"   - vim-liquid          - https://github.com/tpope/vim-liquid
 "
 " Run this commands after installing:
 "   To fix json bugs:
