@@ -153,6 +153,10 @@ function pdf-concat() {
     pdftk $1 cat output $2
 }
 
+function convert-jpg-to-pdf-a4() {
+    pdfjam --paper a4paper --outfile $2 $1
+}
+
 function convert-to-progressive-jpg() {
     convert -strip -interlace Plane -quality 80 $1 $2
 }
