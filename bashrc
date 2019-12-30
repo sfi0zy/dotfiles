@@ -104,11 +104,6 @@ alias top='htop'
 # Bash
 alias bash-reload='source ~/.bashrc'
 
-# Git
-alias gp='git pull --rebase'
-alias gs='git status -sb'
-alias git-reset-to-origin='git fetch origin && git reset --hard origin/master && git clean -f -d'
-
 # NPM
 alias npm-list-global-packages='npm list -g --depth=0'
 alias npm-list-global-updates='npm outdated -g --depth=0'
