@@ -10,6 +10,8 @@
 "   - indentLine          - https://github.com/Yggdroot/indentLine
 "   - vim-grammarous      - https://github.com/rhysd/vim-grammarous
 "   - vim-multiple-cusors - https://github.com/terryma/vim-multiple-cursors
+"   - vim-airline         - https://github.com/vim-airline/vim-airline
+"   - vim-airline-themes  - https://github.com/vim-airline/vim-airline-themes
 "   - vim-javascript      - https://github.com/pangloss/vim-javascript
 "   - vim-less            - https://github.com/groenewege/vim-less
 "   - vim-pug             - https://github.com/digitaltoad/vim-pug
@@ -82,6 +84,7 @@ set synmaxcol=120
 
 " Apply colorscheme
 colorscheme atlantic-dark
+let g:airline_theme='term'
 
 " Highlight 80 and 120 columns
 highlight ColorColumn ctermbg=232 guibg=#060606
