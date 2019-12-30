@@ -17,6 +17,9 @@
 "   - vim-pug             - https://github.com/digitaltoad/vim-pug
 "   - vim-liquid          - https://github.com/tpope/vim-liquid
 "
+" Installed color schemes:
+"   - atlantic-dark       - https://github.com/sfi0zy/atlantic-dark.vim
+"
 " Run this commands after installing:
 "   To fix json bugs:
 "     :e $VIMRUNTIME/syntax/json.vim
