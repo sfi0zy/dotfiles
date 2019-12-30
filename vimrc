@@ -75,6 +75,11 @@ let NERDTreeShowHidden = 1
 " Enable syntax highlighting by default
 syntax on
 
+
+" Disable highlighting on long lines (improves performance)
+set synmaxcol=120
+
+
 " Apply colorscheme
 colorscheme atlantic-dark
 
