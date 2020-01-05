@@ -160,3 +160,76 @@ function clocks() {
     printf "MSK " && TZ=":Europe/Moscow"       date "+%_I:%M %p %A"
     printf "SV  " && TZ=":America/Los_Angeles" date "+%_I:%M %p %A"
 }
+
+
+#-------------------------------------------------------------------------------
+# PATH MANIPULATIONS
+#-------------------------------------------------------------------------------
+
+# Add Ruby Gems from ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+# Add snap packages
+export PATH="$PATH:/snap/bin"
+
+
+
+#-------------------------------------------------------------------------------
+# CUSTOM TERMINAL TITLES
+#-------------------------------------------------------------------------------
+# ! This script is tested in Elementary OS Hera with default terminal only.
+#
+# This script adds titles for tabs in terminal with the current working
+# directory and the last executed command (without sudo, cd and other
+# non-informative parts of it).
+
+PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\$(print_terminal_tab_title)\a\]$PS1"
+
+last_command=""
+
+
+print_terminal_tab_title () 
+{
+    directory_for_title=""
+
+    if [ "$PWD" == "$HOME" ]; then
+        directory_for_title="Home"
+    elif [ "$PWD" == "/" ]; then
+        directory_for_title="/"
+    else
+        directory_for_title="${PWD##*/}"
+    fi
+
+
+    command_for_title=""
+
+    if [[ "$last_command" == "" ]]; then
+        echo "$directory_for_title"
+        return
+    elif [[ "$last_command" == sudo* ]]; then
+        command_for_title="${last_command:5}"
+        command_for_title="${command_for_title%% *}"
+    else
+        command_for_title="${last_command%% *}"
+    fi
+
+    printf "%s: %s" "$directory_for_title" "$command_for_title"
+}
+
+
+update_terminal_tab_title()
+{
+    case "$BASH_COMMAND" in 
+        *\033]0*|update_*|echo*|printf*|clear*|cd*)
+            last_command=""
+        ;;
+        *)
+            last_command="${BASH_COMMAND}"
+            printf "\033]0;%s\007" "$1"
+        ;;
+    esac
+}
+
+preexec_functions+=(update_terminal_tab_title)
+
