@@ -25,7 +25,7 @@
 "     :e $VIMRUNTIME/syntax/json.vim
 "     :g/if has('conceal')/s//& \&\& 0/
 "
-" Author: Ivan Bogachev <sfi0zy@gmail.com>, 2018-2019
+" Author: Ivan Bogachev <sfi0zy@gmail.com>, 2018-2020
 "
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -2,7 +2,15 @@
 #
 # ~/.bashrc
 #
-# Author: Ivan Bogachev <sfi0zy@gmail.com>, 2018-2019
+# Additional packages:
+#   - htop
+#   - pdftk
+#   - git
+#   - gitk
+#   - imagemagick
+#   - nodejs + npm (recommended to use n: https://github.com/tj/n )
+#
+# Author: Ivan Bogachev <sfi0zy@gmail.com>, 2018-2020
 #
 # ==============================================================================
 
@@ -19,7 +27,7 @@ esac
 #-------------------------------------------------------------------------------
 # Custom command prompt
 #-------------------------------------------------------------------------------
-# ✓ [08:45 AM] sfi0zy:x201e ~ $
+# ✓ [08:45 AM] sfi0zy:vivobook ~ $
 #
 # 1. Result of execution of the previous command (success [GREEN] / error [RED])
 # 2. Current time [SAME COLOR AS #1]
@@ -178,7 +186,7 @@ export PATH="$PATH:/snap/bin"
 #-------------------------------------------------------------------------------
 # CUSTOM TERMINAL TITLES
 #-------------------------------------------------------------------------------
-# ! This script is tested in Elementary OS Hera with default terminal only.
+# ! This script is tested in Elementary OS with default terminal only.
 #
 # This script adds titles for tabs in terminal with the current working
 # directory and the last executed command (without sudo, cd and other
