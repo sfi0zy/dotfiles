@@ -9,6 +9,7 @@
 #   - gitk
 #   - imagemagick
 #   - nodejs + npm (recommended to use n: https://github.com/tj/n )
+#   - ngrok (can be installed as snap package)
 #
 # Author: Ivan Bogachev <sfi0zy@gmail.com>, 2018-2020
 #
@@ -129,7 +130,8 @@ alias status='uname -sr && date && sensors | grep Core && free -h'
 
 # Network
 alias check-internet-connection='ping 8.8.8.8 -c 5'
-alias share-this-directory='http-server & lt --port 8080'
+alias serve-this-directory='http-server'
+alias share-this-directory='http-server & ngrok http 8080 && kill $!'
 
 # Useful tools
 alias random-string='cat /dev/urandom | tr -cd "a-f0-9" | head -c 32'
