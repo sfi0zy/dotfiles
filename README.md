@@ -23,7 +23,7 @@ The full list of installed packages is in the comments in *bashrc*.
 - NERDTree
 - Airline
 - Omni auto-completion
-- Syntastic + ESLint
+- Syntastic + ESLint + Stylelint
 - Grammar checker
 
 The full list of recommended packages to install (with links to GitHub) and colors for vim and for terminal are described in comments in *vimrc*.

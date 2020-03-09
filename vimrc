@@ -33,6 +33,17 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 
+" Find the directory where 'vim' command was executed
+" We use it to load configs from root directory of project where vim session
+" is working, not from subdirectories of it.
+function FindSessionDirectory() abort
+    if len(argv()) > 0
+        return fnamemodify(argv()[0], ':p:h')
+    endif
+    return getcwd()
+endfunction!
+
+
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "   Tabs & Spaces
@@ -161,9 +172,23 @@ let g:syntastic_check_on_wq              = 0
 
 " Eslint
 let g:syntastic_javascript_checkers      = ['eslint']
-let g:syntastic_javascript_eslint_exe    = 'npx eslint'
+let g:syntastic_javascript_eslint_exe    = 'npx --no-install eslint'
 let g:syntastic_javascript_eslint_exec   = '/bin/ls'
-let g:syntastic_javascript_eslint_args   = '--no-eslintrc --config ./.eslintrc'
+let g:syntastic_javascript_eslint_args   = '--config ' . FindSessionDirectory() . '/.eslintrc'
+
+" Stylelint
+let g:syntastic_css_checkers             = ['stylelint']
+let g:syntastic_css_stylelint_exe        = 'npx --no-install stylelint'
+let g:syntastic_css_stylelint_exec       = '/bin/ls'
+let g:syntastic_css_stylelint_args       = '--config ' . FindSessionDirectory() . '/.stylelintrc'
+
+let g:syntastic_less_checkers            = ['stylelint']
+let g:syntastic_less_stylelint_exe       = 'npx --no-install stylelint'
+let g:syntastic_less_stylelint_exec      = '/bin/ls'
+let g:syntastic_less_stylelint_args      = '--config ' . FindSessionDirectory() . '/.stylelintrc'
+
+let g:airline#extensions#syntastic#enabled = 1
+
 
 
 
