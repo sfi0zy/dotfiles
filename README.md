@@ -37,6 +37,9 @@ The full list of recommended packages to install (with links to GitHub) and colo
 ### .eslintrc
 - Extended Airbnb config
 
+### .stylelintrc
+- Custom config, created from scratch (still in testing)
+
 
 ## LICENSE
 
