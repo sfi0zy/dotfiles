@@ -35,12 +35,17 @@ esac
 # 3. Username [RED]
 # 4. Hostname [YELLOW]
 # 5. Working directory [BLUE]
+# 6. Git branch (if .git exists in the current directory)
 
 PS1="\$(if [[ \$? == 0 ]]; then \
         echo \"\[\033[01;32m\]\342\234\223\"; \
     else \
         echo \"\[\033[01;31m\]\342\234\227 error:\$?\"; \
-    fi) [\@] \[\033[01;31m\]\u\[\033[01;00m\]:\[\033[01;33m\]\h\[\033[01;34m\] \w $\[\033[00m\] "
+    fi) [\@] \[\033[01;31m\]\u\[\033[01;00m\]:\[\033[01;33m\]\h\[\033[01;34m\] \w\$(if [[ -d .git ]]; then
+        echo \"\[\033[01;35m\] | git:\$(git rev-parse --abbrev-ref HEAD) $\[\033[01;33m\]\"; \
+    else \
+        echo \" $\";
+    fi) \[\033[00m\]"
 
 
 
