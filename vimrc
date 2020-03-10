@@ -62,7 +62,7 @@ set expandtab
 let g:indentLine_color_term = 236
 
 " Remove trailing whitespaces
-autocmd FileType html,pug,css,less,javascript,json autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd BufWritePre * %s/\s\+$//e
 
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
