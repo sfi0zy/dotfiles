@@ -40,7 +40,7 @@ esac
 PS1="\$(if [[ \$? == 0 ]]; then \
         echo \"\[\033[01;32m\]\342\234\223\"; \
     else \
-        echo \"\[\033[01;31m\]\342\234\227 error:\$?\"; \
+        echo \"\[\033[01;31m\]\342\234\227\"; \
     fi) [\@] \[\033[01;31m\]\u\[\033[01;00m\]:\[\033[01;33m\]\h\[\033[01;34m\] \w\$(if [[ -d .git ]]; then
         echo \"\[\033[01;35m\] | git:\$(git rev-parse --abbrev-ref HEAD) $\[\033[01;33m\]\"; \
     else \
@@ -131,7 +131,6 @@ alias apt-list-packages='apt-mark showmanual'
 # System
 alias save-etc='sudo etckeeper commit'
 alias etc-history='cd /etc && sudo gitk && cd -'
-alias status='uname -sr && date && sensors | grep Core && free -h'
 
 # Network
 alias check-internet-connection='ping 8.8.8.8 -c 5'
@@ -204,7 +203,7 @@ PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\$(print_terminal_tab_title)\a\]$P
 last_command=""
 
 
-print_terminal_tab_title () 
+print_terminal_tab_title ()
 {
     directory_for_title=""
 
@@ -235,7 +234,7 @@ print_terminal_tab_title ()
 
 update_terminal_tab_title()
 {
-    case "$BASH_COMMAND" in 
+    case "$BASH_COMMAND" in
         *\033]0*|update_*|echo*|printf*|clear*|cd*)
             last_command=""
         ;;
