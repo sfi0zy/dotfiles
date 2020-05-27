@@ -4,6 +4,7 @@
 "
 " Installed packages:
 "   - Pathogen            - https://github.com/tpope/vim-pathogen
+"   - Editorconfig        - https://github.com/editorconfig/editorconfig-vim
 "   - Emmet               - https://github.com/mattn/emmet-vim
 "   - NerdTree            - https://github.com/scrooloose/nerdtree
 "   - Syntastic           - https://github.com/vim-syntastic/syntastic
@@ -19,11 +20,6 @@
 "
 " Installed color schemes:
 "   - atlantic-dark       - https://github.com/sfi0zy/atlantic-dark.vim
-"
-" Run this commands after installing:
-"   To fix json bugs:
-"     :e $VIMRUNTIME/syntax/json.vim
-"     :g/if has('conceal')/s//& \&\& 0/
 "
 " Author: Ivan Bogachev <sfi0zy@gmail.com>, 2018-2020
 "
@@ -196,5 +192,7 @@ let g:airline#extensions#syntastic#enabled = 1
 "  Others
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-" . . .
+" Disable indentLine for json files and show the quotes in them.
+let g:vim_json_syntax_conceal = 0
+autocmd Filetype json let g:indentLine_enabled = 0
 
